@@ -10,8 +10,8 @@ Shadowsocks-libev server with v2ray-plugin running in Docker.
 
 ## Current version
 
-+ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.2.3
-+ [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.0
++ [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev): 3.3.5
++ [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin): 1.3.2
 
 ## Usage
 
@@ -31,7 +31,7 @@ docker pull boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
 docker run \
     -d \
     --restart always \
-    -p <server_address>:80:1080 \
+    -p <server_address>:1080:1080 \
     -e PASSWORD=<password> \
     boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
 ```
@@ -47,7 +47,7 @@ services:
     image: boris1993/shadowsocks-v2ray-docker:v3.2.3-1.0
     restart: always
     ports:
-      - <server_address>:80:1080
+      - <server_address>:1080:1080
     environment:
       PASSWORD: <password>
 ```
